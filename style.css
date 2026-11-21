@@ -3,8 +3,9 @@
   --muted: #5b6270;
   --line: #e4e6ea;
   --bg: #fafaf8;
-  --accent: #2f6b4f;
-  --accent-soft: #e6efe9;
+  --accent: #0F757F;
+  --accent-soft: #e3f1f2;
+  --header: #14161A;
   --max: 760px;
 }
 
@@ -27,28 +28,18 @@ a:hover { text-decoration-thickness: 2px; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
 header.site {
-  border-bottom: 1px solid var(--line);
-  background: #fff;
+  background: var(--header);
 }
 header.site .wrap {
   display: flex; align-items: center; justify-content: space-between;
-  height: 68px;
+  height: 76px;
 }
-.brand {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 700; font-size: 19px; letter-spacing: -0.01em;
-  color: var(--ink); text-decoration: none;
-}
-.brand .mark {
-  width: 30px; height: 30px; border-radius: 8px;
-  background: var(--accent); color: #fff;
-  display: grid; place-items: center;
-  font-size: 15px; font-weight: 800;
-}
+.brand { display: flex; align-items: center; text-decoration: none; }
+.brand img { height: 44px; width: auto; display: block; }
 nav a {
-  color: var(--muted); text-decoration: none; font-size: 15px; margin-left: 22px;
+  color: #C9CDD4; text-decoration: none; font-size: 15px; margin-left: 22px;
 }
-nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+nav a:hover, nav a[aria-current="page"] { color: #FFFFFF; }
 
 .hero { padding: 88px 0 56px; }
 .eyebrow {
@@ -75,7 +66,7 @@ section.block p { margin: 0 0 12px; color: #2c3038; }
 .card p { margin: 0; font-size: 15px; color: var(--muted); }
 
 /* Legal pages */
-.legal { padding: 56px 0 40px; }
+.legal { padding-top: 56px; padding-bottom: 40px; }
 .legal h1 { font-size: 36px; letter-spacing: -0.02em; margin: 0 0 6px; }
 .legal .updated { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
 .legal h2 { font-size: 20px; margin: 36px 0 10px; }
@@ -90,6 +81,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
 footer.site a { color: var(--muted); margin-right: 18px; }
 
 @media (max-width: 540px) {
+  .brand img { height: 32px; }
   nav a { margin-left: 14px; font-size: 14px; }
   .hero { padding: 56px 0 40px; }
 }
